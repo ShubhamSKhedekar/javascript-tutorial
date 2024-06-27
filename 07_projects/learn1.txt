@@ -1,0 +1,24 @@
+-Javascript events
+-eventListener is used on any dom element to carry out certain operation - onclick, on submit etc
+after events to perform certain operations we use eventListener
+-synta: element.eventListener(<eventName>, function(e){}, false) 
+eventName: indicates onclick, on submit etc events
+function: callback function consists of event object by default
+false: used for event bubble propagation - default false
+
+-Event propagation using eventListener
+-false: event bubble propagation from child to parent element
+-true: event bubble propagation from parent to child element
+
+-event methods
+-in eventListener, callback function's event object has different methods and objects
+-event.target 
+-it is very important - which gives where user has clicked on screen/ 
+which keyboard keys is pressed/ timestamp at which event has occured / x,y coordinates on screen according
+to where user has clicked and etc other things /  dom element Id which user has clicked 
+
+-e.preventDefault();
+-e.target.id
+-e.key, e.keyCode, e.code
+
+
