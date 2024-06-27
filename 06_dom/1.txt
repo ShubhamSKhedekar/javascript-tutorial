@@ -1,0 +1,60 @@
+-Dom : Dom is Document object model
+-Whatever we see on screen - which is in inform of html page at the backend - can be 
+considered as Dom
+-DOM manipulation is changing / altering content of html page from browser(inspect) or using
+ide(of yor own code/html page)
+
+-window - is an complex object which has many things like 'document' which we use most popularly
+-console.log(window); - on browser try
+
+-document is an another object where all your html content is present, there is other
+lot more information but we mostly use for html content
+- console.log(window.document); / console.log(document); - this is same
+-console.log(document.dir) - to get details about document contents
+
+-all these structure window - document - html - html consits of head , body - head consists
+of title, metadata and body consists of combi of div, h1 etc tags
+-all this structure is in tree node forms - one we have in dsa
+
+
+-DOM selector-fetch element from Dom 
+
+-document.getElementById(<id>).<methods to use>
+-document.getElementByClassName(<classname>) - if mutiple class returns elements collections
+having similar class name - use to target document.getElementByClassName(<classname>)[<index>]
+-nodes list and collections of element are similar to array but not exact array
+-Array.from(<collections var name>)
+Collections of element can be converted to array to traverse it / for various other functions
+
+-document.querySelector("css class selector for targeting html element")
+-document.querySelector("<tag>"), document.querySelector(".<classname>"), document.querySelector("#<id>")
+-in document.querySelector() method, all class slectors available in css works in this like 
+document.querySelector("input[type='password']") - select input tag whose inputtype= password 
+document.querySelector("p:firstchild") - Selects first <p> element that is the first child of its parent
+
+-document.querySelectorAll("css class selector for targeting html element") 
+-document.querySelectorAll("div") - this targets all div tag in dom/html and returns nodes list
+-nodes list and collections of element are similar to array but not exact array
+-to traverse nodeslist we use foreach method of nodeslist
+
+-documentation: css class selector link: https://www.w3schools.com/csSref/css_selectors.php
+
+-Difference between innerText, textContent, innerHTML
+-innerText: returns only visible text between html tags without any html tags
+-textContent: returns visible+hidden text between html tags without any html tags
+-innerHTML: returns visible+hidden text between html tags with any html tags
+
+-Eg: <div id="head">Hello my name is Shubham. <span style="display:none;">I am a software engineer.</span></div>
+-innerText: ""
+-textContent:I am a software engineer.
+-innerHTML: <span style="display:hiddden;">I am a software engineer.</span>
+-outerText: Hello my name is Shubham.
+-outerHTML: <div id="head">Hello my name is Shubham. <span style="display:none;">I am a software engineer.</span></div>
+
+
+
+
+
+
+
+
