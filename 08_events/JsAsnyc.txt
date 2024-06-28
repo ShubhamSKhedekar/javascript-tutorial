@@ -1,0 +1,55 @@
+-Javascript is a synchronous and single threaded language
+-It carrout out execution of code in order - one after another as it is written
+-due single thread, untill current operation is not comleted it does not move ahead
+with next operation
+-although there are some ways/areas where js behaves asynchronously
+
+
+-Js flow and working
+-Js engine is consists of Global execution context(this), memory phase and execution phase
+-when js code is loaded - above three are also loaded
+-Ex code:
+let val1 =10;
+let val2 =5;
+
+function add(a,b){
+    total=a+b;
+    return total;
+}
+
+let r1 = add(val1, val2);
+let r2 = add(2, 4);
+-when js is ran - Memory phase get active here decalred var are assigned with undefined and functions
+defination is stored in memory
+-val1, val2, r1, r2 = undefined & add function defination is stored in memory
+-after completion of memory phase - execution phase starts here value assigning to varaibles
+and function execution works
+-val1=10, val2=5, function defination remains as it is in memory, 
+for r1 = add(10, 5) -> 15
+for r2 = add(2,4) -> 6 
+
+
+-advanced Js flow and working
+-advanced js flow includes basic + webapi/node methods + fetch/promises
+-when js is ran it craetes memory heap of declared var and function defination and execution
+phase where assigning var actual value and execution of function is done
+-when some function calls for webapi methods eg: setTimeout() - for webapi methods 
+different queue is created called as Taskqueue where this call's callback functions are stored 
+untill those are complete - once completed it is allowed in execution phase
+-when fetch() or promises() methods are used their callback functions are stored in high priority queue- once
+fetch/promises completes fetching data - they are pushed in call stack/execution phase
+in highest priority
+-execution phase/memory phase are inform of stack - filo
+-task, high priority queue are in form of queue - fifo
+
+
+-concept if blocking code vs unblocking code
+-blocking code: indicates untill current operation is not completed it does not move ahead
+with next operation
+-for eg: untill file read is not completed it does not execute further logic
+-unblocking code: indicates untill current operation is not completed, it allows execution of 
+next operation
+-for eg: untill file read is in process, it does execute further logic
+
+
+
