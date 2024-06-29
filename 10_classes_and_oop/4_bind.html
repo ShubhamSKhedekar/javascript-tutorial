@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    //functionToBeCalled.bind(this, args if any);
+    //bind is used to pass reference of current function/object to the function which is been called
+
+    class React {
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            //requirement
+            document
+                .querySelector('button')
+                //.addEventListener('click', this.handleClick); //when used this we have ref of button html
+                //inside this
+                .addEventListener('click', this.handleClick.bind(this));
+                //need to use .bind(this) - where bind causes to bind ref of current class with different
+                //function which is called
+        }
+        
+        handleClick(){
+            console.log(this);
+            console.log("button clicked");
+            console.log(this.server);
+        }
+    }
+
+    const app = new React()
+</script>
+</html>
