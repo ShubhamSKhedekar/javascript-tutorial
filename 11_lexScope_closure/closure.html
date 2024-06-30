@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+
+    <script>
+    //closure 
+    //it is combinations of bundled functions - i.e inner and outer functions
+
+    //Lexical scope
+    //-it is considered when there is scenario of inner and outer functions sinle/multiple - then concept of 
+    //lexical scope works
+    //-it indicates that inner function(child) is dependant on outer function(parent) and also inner function
+    //has access of outer functions variables and its functions and not vice versa
+    //-ex: displayName() - inner is dependant on init() - outer
+    // function init() {
+    //     let name = "Mozilla"; 
+    //     function displayName() {
+    //         console.log(name); 
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+    //-Ex:2
+    // function outer(){
+    //     let username = "hitesh"
+    //     console.log("OUTER", secret);
+    //     function inner(){
+    //         let secret = "my123"
+    //         console.log("inner", username);  //works fine as outer() var
+    //     }
+    //     function innerTwo(){
+    //         console.log("innerTwo", username);  //works fine as outer() var
+    //         console.log(secret);  //gives error - scope issue - var secret belongs to inner()
+    //     }
+    //     inner();
+    //     innerTwo();
+    // }
+    // outer()
+    // console.log("TOO OUTER", username);
+
+
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+
+        //here displaName() function's reference is returned in - const myFunc = displayName;
+        //while returning displaName() function's reference - as it is child function and it has dependancy
+        //on parent function - parent(makeFunc()) function's reference is also returned with it
+
+    //     return displayName;
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+    //as displaName() function's reference is returned in - const myFunc = displayName;
+    //and we execute myFunc() - it is actually executing displayName() - which is child function
+    //one might think that it will throw error while printing name (parent function dependancy) - but as 
+    //displayName() function also consists of parent function refernece therefore it will execute properly
+    //this is due to lexical scope
+    </script>
+
+
+    //Consider various buttons which when click change background color of body - there are 100+ buttons
+    //how can be it done
+    <script>
+        //1st approach: we add  eventlistener on every button to change bg color
+        //not efficient
+        // document.getElementById("orange").onclick = function(){
+        //     document.body.style.backgroundColor = `orange`
+        // }
+        // document.getElementById("green").onclick = function(){
+        //     document.body.style.backgroundColor = `green`
+        // }
+
+        //2nd approach: use function which changes background color - and using onclick on buttons to call
+        //this function
+        // function clickHandler(color){
+        //     document.body.style.backgroundColor = `${color};
+        // }
+        // document.getElementById('orange').onclick = clickHandler("orange");
+        // document.getElementById('green').onclick = clickHandler("green");
+        //here we pass .onclick = clickHandler("orange"); - which indicates directly executing clickHandler()
+        //function - even without onClick happening - resulting color change didnt work
+        //onclick= needs function reference 
+
+        //3rd Approach: use inner function and concept of lexical scope
+        function clickHandler(color){
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        };
+
+        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('green').onclick = clickHandler("green")
+        //here  clickHandler() functions get executed same as 2nd approach but we return reference of inner
+        //function there - which gets stores in .onclick = clickHandler("orange") returned inner function ref
+        //when onclick happens on button then only we execute that inner function - as sue to lexical scope
+        //inner function ref also has ref of its parent function i.e clickHandler() to access color property
+
+    </script>
+</html>
