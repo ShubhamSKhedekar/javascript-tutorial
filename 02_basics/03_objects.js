@@ -3,11 +3,11 @@
 
 // object literals
 //creavar var symbol
-const mySym = Symbol("key1")
+const mySym = Symbol("key1");
 
 const JsUser = {
     name: "Hitesh",
-    "full name": "Hitesh Choudhary",
+    "full name": "Hitesh Choudhary",  //you cannot access this by - JsUser.full name - at that time need to use JsUser[full name] syntax
     [mySym]: "mykey1",  //symbol should be used like this manner [<name>]
     age: 18,
     location: "Jaipur",
@@ -18,6 +18,7 @@ const JsUser = {
 
 // console.log(JsUser.email)
 // console.log(JsUser["email"])
+//Both gives same output - but different syntax for accessing objects elements
 // console.log(JsUser["full name"])
 // console.log(JsUser[mySym])
 
