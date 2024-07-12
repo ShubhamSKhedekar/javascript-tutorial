@@ -9,7 +9,7 @@ console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
 const gameName = new String('hitesh-hc-com')
 // console.log(gameName[0]);
 // console.log(gameName.__proto__); 
-//o/p-{} -  but actually access on browser - in basically inculdes methods of string (as we used __proto__ for string type variable) and various other information
+//o/p-{} -  but actually access on browser's console - in basically inculdes methods of string (as we used __proto__ for string type variable) and various other information
 
 
 //famous string functions
