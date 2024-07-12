@@ -11,10 +11,11 @@ let userEmail;
 const id = Symbol('123')
 const anotherId = Symbol('123')
 
-console.log(id === anotherId);
-console.log(typeof anotherId);
+console.log(id === anotherId); //false
+console.log(typeof anotherId);  //symbol
 
 // const bigNumber = 3456543576654356754n
+//add suppfix n to any number for conversion into big number
 
 
 // Reference (Non primitive)
