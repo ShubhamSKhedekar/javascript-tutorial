@@ -2,7 +2,14 @@
 //of particular property of an object
 const descripter = Object.getOwnPropertyDescriptor(Math, "PI")
 // console.log(descripter);
+//descriptor: {
+//value:3.14...
+//writable:false
+//enumerable:false
+//configurable:false
+//}
 
+//As in above, writable:false therefore
 //here we try to change PI property of Math object - which is internally defined as constant
 //therefore we are unable to change it
 // console.log(Math.PI);
