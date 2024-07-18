@@ -12,9 +12,9 @@ function SetUsername(username){
 }
 
 function createUser(username, email, password){
-    SetUsername(username); // when used this - it does not call SetUserName() method
-
-    SetUsername.call(username); // when this used - it does call method but username value is not set in
+    SetUsername(username); 
+    SetUsername.call(username); 
+    //Both above calling methods - it does call method but username value is not set in
     //createuser's username - it is set in SetUserName's username - after function executes it is removed from
     //call stack - with that value set in username in SetUserName() is also removed.
 
