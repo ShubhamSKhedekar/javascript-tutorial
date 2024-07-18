@@ -87,6 +87,21 @@ async function consumePromiseFive(){
 }
 consumePromiseFive();
 
+//Fetch working
+//-once we use fetch('something') - it provokes 2 things 
+//-request is sent to browser to fetch data
+//-Create memory, intiate 2 arrays onFullFilled[], onRejection[] - all this are empty untill data is fetched from 
+//browser request
+//On success--
+//-Once request is successfull is fetching any data - it is counted as succesfull - and sends it into  onFullFilled[] -
+//further this array stores this data into the memory which is created - which is actually accessable to user
+//-Sometimes, request is made to browser through fetch,  but incase it recives 404 or etc error codes from browser
+//while fetching data - it is also counted as success and sends it into  onFullFilled[]
+//On failure--
+//-If request is not fetch data (any data), fails to make a request to browser due to technical issue - it is counted as 
+//failure - that error is sent into onRejection[] and further this array stores this data into the memory which is created - which is
+//actually accessable to user
+
 
 //async and await with fetch()
 // async function getAllUsers(){
