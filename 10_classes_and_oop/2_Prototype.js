@@ -66,5 +66,5 @@ String.prototype.trueLength = function(){
     console.log(`${this}`);
     console.log(`True length is: ${this.trim().length}`);
 }
-// anotherUsername.trueLength()  //True length is: ChaiAurCode
-// "hitesh".trueLength()  //True length is: hitesh
+// anotherUsername.trueLength()  //True length is: 11
+// "hitesh".trueLength()  //True length is: 6
