@@ -11,13 +11,18 @@
 <script>
     //functionToBeCalled.bind(this, args if any);
     //bind is used to pass reference of current function/object to the function which is been called
+    //Bind is modern function which is use unlike call - which was actually used before class introduction in js 
 
     class React {
         constructor(){
             this.library = "React"
             this.server = "https://localhost:300"
 
-            //requirement
+            //For Executing particular task - (it can be any like changing backgroung color of any html) - for all this
+            //activities we need reference/access to html elements - which is done in constructor using querySelector, as constructor is first
+            //thing loaded as class loads
+            
+            //actual requirement/task
             document
                 .querySelector('button')
                 //.addEventListener('click', this.handleClick); //when used this we have ref of button html
@@ -34,6 +39,7 @@
         }
     }
 
+    //After creating object of class - it would call its class constructor
     const app = new React()
 </script>
 </html>
