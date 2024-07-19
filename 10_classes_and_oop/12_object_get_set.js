@@ -1,6 +1,8 @@
 //using Object.method - are factory functions
 //using new ClassName() - can be said constructor functions
 
+//_<property Name> - indicates as that feikd has become private - (not actually becomes private - it is refered as private)
+
 const User = {
     _email: 'h@hc.com',
     _password: "abc",
