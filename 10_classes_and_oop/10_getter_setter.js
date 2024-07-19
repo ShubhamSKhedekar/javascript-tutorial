@@ -24,6 +24,7 @@ console.log(a.email);
 
 //set and get method should be define - with orginal feild value name
 //and to use '_<originalFeildName>' to set and get value
+//_<property Name> - indicates as that feikd has become private - (not actually becomes private - it is refered as private)
 //if we use originale feilds name - it creates confusion in who will set/get feild value between
 //constructor and get/set methods - results into error - max callstack reached
 
