@@ -30,10 +30,10 @@ const hundreds = 1000000
 // console.log(Math.max(4, 3, 6, 8));
 
 
-//generate random number - Math.random() gives o/p between 0-1 i.e. 0.3,0.2 etc
+//generate random number - Math.random() gives o/p between 0-1(exclusive) i.e. 0.3,0.2,--0.9 etc
 console.log(Math.random());
-console.log((Math.random()*10) + 1); //to get value >=1 to 9
-console.log(Math.floor(Math.random()*10) + 1); //to get value >=1 to 9
+console.log((Math.random()*10) + 1); //to get value >=1 to 10
+console.log(Math.floor(Math.random()*10) + 1); //to get value >=1 to 10
 
 const min = 10
 const max = 20
