@@ -24,6 +24,10 @@ console.log(newString);
 const anotherString = gameName.slice(-8, 4)
 console.log(anotherString);
 
+//The substring() method extracts characters from start to end (exclusive).
+//The substr() method begins at a specified position, and returns a specified number of characters.
+//The slice() method - The start and end parameters specifies the part of the string to extract.
+
 const newStringOne = "   hitesh    "
 console.log(newStringOne);
 console.log(newStringOne.trim());
